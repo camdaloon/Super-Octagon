@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Super Octagon</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- 1. Creator Splash Overlay Screen -->
+        <div id="creatorSplash" class="splash-screen">
+            <img src="creator.png" alt="camdaloon logo" class="splash-logo">
+            <div class="creator-name">camdaloon</div>
+            <div class="splash-subtitle">PRESENTS</div>
+        </div>
+
+        <!-- 2. Game Title Loading Overlay Screen -->
+        <div id="gameLoading" class="splash-screen hidden">
+            <img src="logo.png" alt="Super Octagon logo" class="loading-logo">
+            <div class="loading-bar-container">
+                <div id="loadingProgressBar"></div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- 3. Primary User Interface HUD & Overlays -->
+        <div id="ui" class="hidden">
+            <div id="hud">
+                <div id="score">TIME: 0.00</div>
+                <div id="controlHints">PRESS [P] TO PAUSE &nbsp;|&nbsp; PRESS [M] TO MUTE</div>
+                <div id="best">BEST: 0.00</div>
+            </div>
+            <div id="pauseScreen" class="hidden">PAUSED</div>
+            <div id="menuOverlay">
+                <h1 id="titleText">Super Octagon</h1>
+                <div id="selectionGroup">
+                    <div id="difficultySelector">
+                        <div class="arrow-indicator">&lsaquo;</div>
+                        <div id="difficultyLabel">NORMAL</div>
+                        <div class="arrow-indicator">&rsaquo;</div>
+                    </div>
+                    <div id="statsPanel"></div>
+                    <div id="actionHint">PRESS SPACE TO BEGIN</div>
+                </div>
+            </div>
+            <!-- Bottom Controls Dock -->
+            <div id="footerDock">
+                <div id="muteStatus">PRESS [M] TO MUTE</div>
+                <div id="ver">v1.1.4-stable</div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
